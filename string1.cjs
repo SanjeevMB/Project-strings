@@ -13,7 +13,12 @@ function string1(str){
             ans += arr[index];
         }
     }
-    return +ans;
+    let typeOfData = typeof (+ans);
+    if(typeOfData === 'NaN'){
+        return 0;
+    }else if(typeOfData === 'number'){
+        return +ans;
+    }
 }
 
 module.exports = string1;
